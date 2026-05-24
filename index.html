@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div id="onboarding">
+        <div id="step1" class="step">
+            <h1>What's your name?</h1>
+            <input type="text" id="userName" placeholder="Enter name...">
+            <button onclick="saveName()">Next</button>
+        </div>
+
+        <div id="step2" class="step hidden">
+            <h1>Choose your Vibe</h1>
+            <div class="theme-grid">
+                <button onclick="setTheme('discord-blurple')">Blurple</button>
+                <button onclick="setTheme('midnight-glow')">Midnight</button>
+            </div>
+        </div>
+
+        <div id="step3" class="step hidden">
+            <h1>Select your sites</h1>
+            <div id="site-list"></div>
+            <button onclick="finishSetup()">Let's Go!</button>
+        </div>
+    </div>
+
+    <div id="home" class="hidden">
+        <h1 id="welcomeDisplay"></h1>
+        <div id="userLinks"></div>
+        <footer>Created by Mothsud on GitHub.com</footer>
+        <button id="reset-btn" onclick="resetApp()">Reset Settings</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

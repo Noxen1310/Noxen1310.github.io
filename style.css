@@ -1,1 +1,17 @@
+:root { --bg: #121212; --text: #fff; }
+.hidden { display: none !important; }
 
+body { 
+    margin: 0; height: 100vh; background: var(--bg); color: var(--text);
+    display: flex; justify-content: center; align-items: center;
+    transition: background 0.5s ease;
+}
+
+/* Swirl Animation */
+.swirl { animation: swirlEffect 1s ease-in-out; }
+@keyframes swirlEffect {
+    0% { clip-path: circle(0% at 50% 50%); }
+    100% { clip-path: circle(150% at 50% 50%); }
+}
+
+.step { text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 20px; }
